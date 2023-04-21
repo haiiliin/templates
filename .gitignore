@@ -303,3 +303,6 @@ TSWLatexianTemp*
 # IDE configuration files
 .vscode/
 .idea/
+
+# Temporary myst build files
+_build/
