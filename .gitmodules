@@ -1,0 +1,6 @@
+[submodule "ascelike-new"]
+	path = ascelike-new
+	url = https://github.com/haiiliin/ascelike-new.git
+[submodule "elsarticle"]
+	path = elsarticle
+	url = https://github.com/haiiliin/elsarticle.git
