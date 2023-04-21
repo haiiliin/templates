@@ -9,18 +9,20 @@ authors:
     email: hailin.wang@connect.polyu.hk
 keywords: Example, Paper, Markdown
 exports:
+  - format: docx
+    output: outputs/manuscript.docx
   - format: tex
     template: elsarticle
-    output: outputs/elsarticle-example.zip
+    output: outputs/manuscript-elsarticle.zip
   - format: pdf
     template: elsarticle
-    output: outputs/elsarticle-example.pdf
+    output: outputs/manuscript-elsarticle.pdf
   - format: tex
     template: ascelike-new
-    output: outputs/ascelike-new-example.zip
+    output: outputs/manuscript-ascelike-new.zip
   - format: pdf
     template: ascelike-new
-    output: outputs/ascelike-new-example.pdf
+    output: outputs/manuscript-ascelike-new.pdf
 ---
 
 +++ {"part": "abstract"}
