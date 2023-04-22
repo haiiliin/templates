@@ -1,0 +1,48 @@
+name: Manuscript
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "manuscript.md"
+      - ".github/workflows/manuscript.yml"
+  pull_request:
+    branches:
+      - main
+    paths:
+      - "manuscript.md"
+      - ".github/workflows/manuscript.yml"
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - name: Install/update dependencies
+        run: |
+          npm install -g npm@latest
+          npm install -g myst-cli
+          sudo apt-get install -y texlive-latex-extra texlive-publishers texlive-xetex latexmk
+      - name: Build the manuscript
+        run: myst build manuscript.md --docx --tex --pdf
+      - name: Commit the changes
+        run: |
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions[bot]"
+          git add .
+          git commit -m "Build manuscript for ${{ github.sha }}" || true
+      - name: Push the changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
