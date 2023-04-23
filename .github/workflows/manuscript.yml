@@ -34,7 +34,9 @@ jobs:
           npm install -g myst-cli
           sudo apt-get install -y texlive-latex-extra texlive-publishers texlive-xetex latexmk
       - name: Build the manuscript
-        run: myst build manuscript.md --docx --tex --pdf
+        run: |
+          rm -rf outputs
+          myst build manuscript.md --docx --tex --pdf
       - name: Commit the changes
         run: |
           git config --global user.email "github-actions[bot]@users.noreply.github.com"

@@ -35,13 +35,13 @@ exports:
     output: outputs/manuscript.docx
   - format: tex
     template: elsarticle
-    output: outputs/manuscript-elsarticle.zip
+    output: outputs/manuscript-elsarticle
   - format: pdf
     template: elsarticle
     output: outputs/manuscript-elsarticle.pdf
   - format: tex
     template: ascelike-new
-    output: outputs/manuscript-ascelike-new.zip
+    output: outputs/manuscript-ascelike-new
   - format: pdf
     template: ascelike-new
     output: outputs/manuscript-ascelike-new.pdf
