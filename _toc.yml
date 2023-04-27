@@ -17,7 +17,11 @@
 
 format: jb-book
 root: README
-chapters:
-  - file: elsarticle/README
-  - file: ascelike-new/README
-  - file: paper
+parts:
+  - title: Templates
+    chapters:
+      - file: elsarticle/README
+      - file: ascelike-new/README
+  - title: Examples
+    chapters:
+      - file: paper
