@@ -1,4 +1,4 @@
-% Created with jtex v.0.1.12
+% Created with jtex v.0.1.13
 
 \documentclass[Journal,InsideFigs,DoubleSpace,12pt,letterpaper]{ascelike-new}
 %% Please choose the appropriate document class option:
@@ -58,7 +58,7 @@ DC resistivity surveys obtain information about subsurface electrical conductivi
 
 \begin{figure}[!htbp]
 \centering
-\includegraphics[width=0.9\linewidth]{files/dc-setup-8b068c43dba7d7e016ab6cf507fa8ab0.png}
+\includegraphics[width=0.9\linewidth]{files/dc-setup-19fa3dc836c8fc1dfbb7b4a3f968fe05.png}
 \caption{Setup of a DC resistivity survey.}
 \label{dc-setup}
 \end{figure}
@@ -69,7 +69,7 @@ The flow of current sets up electric fields according to Ohm's law, which relate
 
 \begin{figure}[!htbp]
 \centering
-\includegraphics[width=0.7\linewidth]{files/dc-eqns-5f1cd7fc41ebc37e4f1af11e6383f1c8.png}
+\includegraphics[width=0.7\linewidth]{files/dc-eqns-7722530a2b72855c6bdbaee6eef539f4.png}
 \caption{Derivation of the DC resistivity equations.}
 \label{dc-eqns}
 \end{figure}
@@ -84,7 +84,7 @@ To bring our continuous equations into the computer, we need to discretize the e
 
 \begin{figure}[!htbp]
 \centering
-\includegraphics[width=1\linewidth]{files/mesh-0ce3f88d3a7f7fd458d555094d09cd7f.png}
+\includegraphics[width=1\linewidth]{files/mesh-c6d22ec9507ca6c4c67e465832f4c514.png}
 \caption{Anatomy of a finite volume cell.}
 \label{fig-mesh}
 \end{figure}
@@ -97,7 +97,7 @@ To discretize the first order differential equations we consider a single cell i
 
 \begin{figure}[!htbp]
 \centering
-\includegraphics[width=0.9\linewidth]{files/divergence-fe249412e506c77c9c1330d3d0485d07.png}
+\includegraphics[width=0.9\linewidth]{files/divergence-aa322dddb8bb2807017c6eebe242980f.png}
 \caption{Geometrical definition of the divergence and the discretization.}
 \label{fig-div}
 \end{figure}
@@ -119,7 +119,7 @@ In Figure~\ref{fig-weak-formulation}, we visually walk through the discretizatio
 
 \begin{figure}[!htbp]
 \centering
-\includegraphics[width=1\linewidth]{files/weak-formulation-6755c3674b5e7beabef6ff35649818af.png}
+\includegraphics[width=1\linewidth]{files/weak-formulation-c5d3937b68ad5ff64d1d275cc7c04d21.png}
 \caption{Discretization using the weak formulation and inner products.}
 \label{fig-weak-formulation}
 \end{figure}
@@ -152,7 +152,7 @@ By solving this system matrix, we obtain a solution for the electric potential $
 
 \begin{figure}[!htbp]
 \centering
-\includegraphics[width=1\linewidth]{files/dc-results-1d343accfc6b3d2e788436bfb88902ee.png}
+\includegraphics[width=1\linewidth]{files/dc-results-d90a020cebb7859f9aafab3e97264a55.png}
 \caption{Electric potential on (a) tensor and (b) curvilinear meshes.}
 \label{fig-results}
 \end{figure}
