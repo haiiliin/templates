@@ -1,0 +1,41 @@
+name: Curvenote
+
+on:
+  push:
+    branches:
+      - main
+  schedule:
+    #        ┌───────────── minute (0 - 59)
+    #        │ ┌───────────── hour (0 - 23)
+    #        │ │ ┌───────────── day of the month (1 - 31)
+    #        │ │ │ ┌───────────── month (1 - 12 or JAN-DEC)
+    #        │ │ │ │ ┌───────────── day of the week (0 - 6 or SUN-SAT)
+    - cron: '0 0 * * 0'
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      CURVENOTE_TOKEN: ${{ secrets.CURVENOTE_TOKEN }}
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          submodules: recursive
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - name: Install/update npm/curvenote
+        run: |
+          npm install -g npm@latest
+          npm install -g curvenote
+      - name: Deploy to Curvenote
+        run: |
+          curvenote -v
+          curvenote auth list
+          curvenote deploy -y --ci || true

@@ -1,0 +1,26 @@
+version: 1
+project:
+  title: jtex templates
+  license:
+    code: MIT
+  github: https://github.com/haiiliin/templates
+  authors:
+    - name: WANG Hailin
+      orcid: 0000-0001-5759-2455
+      email: hailin.wang@connect.polyu.hk
+      affiliations:
+        - Tongji University
+        - The Hong Kong Polytechnic University
+
+site:
+  title: templates
+  projects:
+    - slug: templates
+      path: .
+  nav: []
+  template: https://github.com/executablebooks/myst-article-theme.git
+  actions:
+    - title: Learn More
+      url: https://curvenote.com/docs/web
+  domains:
+    - haiiliin.curve.space

@@ -16,7 +16,8 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 
 format: jb-book
-root: paper
+root: README
 chapters:
   - file: elsarticle/README
   - file: ascelike-new/README
+  - file: paper
