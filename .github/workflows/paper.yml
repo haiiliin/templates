@@ -1,18 +1,18 @@
-name: Manuscript
+name: Paper
 
 on:
   push:
     branches:
       - main
     paths:
-      - "manuscript.md"
-      - ".github/workflows/manuscript.yml"
+      - "paper.md"
+      - ".github/workflows/paper.yml"
   pull_request:
     branches:
       - main
     paths:
-      - "manuscript.md"
-      - ".github/workflows/manuscript.yml"
+      - "paper.md"
+      - ".github/workflows/paper.yml"
   workflow_dispatch:
 
 concurrency:
@@ -35,16 +35,16 @@ jobs:
           npm install -g npm@latest
           npm install -g myst-cli
           sudo apt-get install -y texlive-latex-extra texlive-publishers texlive-xetex latexmk
-      - name: Build the manuscript
+      - name: Build the paper
         run: |
           rm -rf outputs
-          myst build manuscript.md --docx --tex --pdf
+          myst build paper.md --docx --tex --pdf
       - name: Commit the changes
         run: |
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git config --global user.name "github-actions[bot]"
           git add .
-          git commit -m "Build manuscript for ${{ github.sha }}" || true
+          git commit -m "Build paper for ${{ github.sha }}" || true
       - name: Push the changes
         uses: ad-m/github-push-action@master
         with:

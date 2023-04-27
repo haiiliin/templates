@@ -32,19 +32,19 @@ keywords:
   - DC equations
 exports:
   - format: docx
-    output: outputs/manuscript.docx
+    output: outputs/paper.docx
   - format: tex
     template: elsarticle
-    output: outputs/manuscript-elsarticle
+    output: outputs/paper-elsarticle
   - format: pdf
     template: elsarticle
-    output: outputs/manuscript-elsarticle.pdf
+    output: outputs/paper-elsarticle.pdf
   - format: tex
     template: ascelike-new
-    output: outputs/manuscript-ascelike-new
+    output: outputs/paper-ascelike-new
   - format: pdf
     template: ascelike-new
-    output: outputs/manuscript-ascelike-new.pdf
+    output: outputs/paper-ascelike-new.pdf
 ---
 
 +++ { "part": "abstract" }
